@@ -1,0 +1,57 @@
+.input-custom {
+  border: 0;
+  width: 100%;
+
+  display: block;
+  background-color: transparent;
+  padding: 10px 10px 10px 0px;
+
+  ~ label {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    z-index: -1;
+    transition: font-size 0.2s ease-out, transform 0.2s ease-out;
+  }
+
+  &:focus {
+    outline: 0;
+    & ~ .underline {
+      &:after {
+        width: 100%;
+      }
+    }
+    & + label {
+      transform: translateY(-140%);
+      font-size: 13px;
+    }
+  }
+  // &:valid {
+  //   & ~ label {
+  //     transform: translateY(-140%);
+  //     font-size: 13px;
+  //   }
+  // }
+
+  & ~ .underline {
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      bottom: 23%;
+      height: 1px;
+      background-color: #11111124;
+      left: 0;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      bottom: 23%;
+      height: 1px;
+      background-color: #ff0000;
+      left: 0;
+      transition: width 0.2s ease-out;
+    }
+  }
+}

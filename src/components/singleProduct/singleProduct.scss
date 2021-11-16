@@ -1,0 +1,127 @@
+a.product-tab_image-back {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+.product-tab_content-title-price {
+  padding: 7px 20px;
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+
+.product-tab-nav-content {
+  position: relative;
+
+  i {
+    &:hover {
+      background-color: #ffffff00;
+      color: #fff;
+    }
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.5em 0.7em 0.5em 0.5em;
+    display: inline-block;
+    background-color: #fff;
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
+  }
+  span {
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+    width: 100%;
+    height: 43px;
+    display: inline-block;
+    right: -1em;
+    z-index: 4;
+    &:nth-child(1) {
+      transition: right 0.2s ease-out, opacity 0.2s ease-out;
+      i {
+        padding-left: 0.6em;
+      }
+    }
+    &:nth-child(2) {
+      transition: right 0.4s ease-out, opacity 0.4s ease-out;
+    }
+    &:nth-child(3) {
+      transition: right 0.6s ease-out, opacity 0.6s ease-out;
+    }
+  }
+}
+
+.product-tab-nav {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 38px;
+  height: 124px;
+  transform: translateY(-50%);
+}
+
+.product-tab_image {
+  &:hover {
+    .product-tab_image-back {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+
+  }
+}
+// .product-tab_image-back-cont {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   opacity: 0;
+//   width: 100%;
+//   height: 100%;
+//   transition: all 0.5s ease;
+// }
+
+.product-tab_image-main {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1111119e;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+}
+.product-tab {
+  margin-bottom: 10px;
+  position: relative;
+  &:hover {
+    .product-tab-nav {
+      span {
+        right: 0px;
+        opacity: 1;
+      }
+    }
+    .product-tab_image-main:after {
+      opacity: 1;
+    }
+    .product-tab_content-title-price {
+      opacity: 1;
+    }
+  }
+}

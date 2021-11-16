@@ -1,0 +1,18 @@
+.cartIcon {
+  i {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    font-weight: 700;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+  }
+}

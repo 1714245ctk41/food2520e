@@ -1,0 +1,53 @@
+.checkout-page {
+  text-align: center;
+  display: flex;
+
+  .checkout-total {
+    width: 30%;
+  }
+  .checkout-table {
+    width: 70%;
+  }
+  th {
+    padding: 1em;
+  }
+
+  td {
+    padding: 0.8em;
+    &:not(:first-child) {
+      width: 25%;
+    }
+    &:nth-child(2) {
+      span {
+        padding-left: 0.5em;
+      }
+    }
+  }
+  img {
+    width: 25%;
+    cursor: pointer;
+  }
+  span {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+  }
+  .checkout-quantity {
+    span {
+      &:not(:nth-child(2)) {
+        width: 45%;
+      }
+    }
+    span {
+      &:nth-child(2) {
+        width: 10%;
+      }
+    }
+  }
+  .checkout-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
